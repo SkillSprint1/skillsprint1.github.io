@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.futuristixapps.skillsprint",
+      "sha256_cert_fingerprints": [
+        "E1:C5:25:B9:85:1B:ED:0F:11:A2:56:71:D5:72:93:2C:F0:C8:D7:27:27:93:CD:99:AA:0F:8E:49:09:88:26:34"
+      ]
+    }
+  }
+]
