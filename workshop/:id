@@ -1,15 +1,18 @@
-<script>
-  const parts = window.location.pathname.split("/");
-  const workshopId = parts[parts.length - 1];
+const parts = window.location.pathname.split("/");
+const workshopId = parts[parts.length - 1];
 
-  const deepLink = `skillsprint://workshop/${workshopId}`;
+const deepLink = `skillsprint://workshop/${workshopId}`;
 
-  window.location.href = deepLink;
+let openedAt = Date.now();
 
-  setTimeout(() => {
-    if (!document.hidden) {
-      window.location.href =
-        "https://play.google.com/store/apps/details?id=com.skillsprint.app";
-    }
-  }, 1500);
-</script>
+window.location.href = deepLink;
+
+setTimeout(() => {
+  const timeElapsed = Date.now() - openedAt;
+
+  // If still on page after delay → assume app did not open
+  if (timeElapsed < 2000 && !document.hidden) {
+    window.location.href =
+      "https://play.google.com/store/apps/details?id=com.futuristixapps.skillsprint";
+  }
+}, 1800);
